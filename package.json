@@ -1,0 +1,14 @@
+{
+  "name": "dashskins",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "bottleneck": "^2.19.5",
+    "date-fns": "^4.1.0",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^3.3.2",
+    "p-limit": "^6.1.0"
+  }
+}
