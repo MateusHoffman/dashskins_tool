@@ -5,16 +5,18 @@ import { coletarHistoricoDeVendasDeCadaModelo } from './4_coletarHistoricoDeVend
 import { removerModelosQueNaoVendeuRecentemente } from './5_removerModelosQueNaoVendeuRecentemente.js';
 import { ordenarModelosPorQuantidadeDeVendaDesc } from './6_ordenarModelosPorQuantidadeDeVendaDesc.js';
 import { encontraPreçoIdeal } from './7_encontraPreçoIdeal.js';
-import { listaMelhoresAnunciosPorRentabilidade } from './8_listaMelhoresAnunciosPorRentabilidade.js';
+import { filtraModelosQueVendePoucoNoPreçoIdeal } from './8_filtraModelosQueVendePoucoNoPreçoIdeal.js';
+import { listaMelhoresAnunciosPorRentabilidade } from './9_listaMelhoresAnunciosPorRentabilidade.js';
 
 
 (async () => {
-  await coletaTodosOsAnunciosAtivos()
-  await mapearApenasDadosImportantes()
-  await agruparAnunciosDoMesmoModelo()
-  await coletarHistoricoDeVendasDeCadaModelo()
-  await removerModelosQueNaoVendeuRecentemente()
-  await ordenarModelosPorQuantidadeDeVendaDesc()
+  // await coletaTodosOsAnunciosAtivos()
+  // await mapearApenasDadosImportantes()
+  // await agruparAnunciosDoMesmoModelo()
+  // await coletarHistoricoDeVendasDeCadaModelo()
+  // await removerModelosQueNaoVendeuRecentemente()
+  // await ordenarModelosPorQuantidadeDeVendaDesc()
   await encontraPreçoIdeal()
+  await filtraModelosQueVendePoucoNoPreçoIdeal()
   await listaMelhoresAnunciosPorRentabilidade()
 })()

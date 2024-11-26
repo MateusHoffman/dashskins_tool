@@ -4,7 +4,7 @@ export const listaMelhoresAnunciosPorRentabilidade = async () => {
   console.log('listaMelhoresAnunciosPorRentabilidade');
   try {
     // 1. Ler os modelos do arquivo JSON
-    const modelos = await readFromJsonFile('./v2/data/7_modelosComPreçoIdeal.json');
+    const modelos = await readFromJsonFile('./v2/data/8_modelosFiltradoPorVendaNoPreçoIdeal.json');
 
     // 2. Inicializar um array vazio para armazenar todos os anúncios processados
     const listaDeMelhoresAnunciosPorRentabilidade = [];
@@ -40,7 +40,7 @@ export const listaMelhoresAnunciosPorRentabilidade = async () => {
 
 
     // 8. Escrever a lista final em um novo arquivo JSON
-    await writeToJsonFile('./v2/data/8_listaDeMelhoresAnunciosPorRentabilidade.json', anunciosComRentabilidadePositiva);
+    await writeToJsonFile('./v2/data/9_listaDeMelhoresAnunciosPorRentabilidade.json', anunciosComRentabilidadePositiva);
 
     console.log('Processamento concluído com sucesso!');
   } catch (error) {

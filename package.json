@@ -5,10 +5,22 @@
   "type": "module",
   "license": "MIT",
   "dependencies": {
+    "axios": "^1.7.8",
+    "axios-socks5-agent": "^1.0.5",
     "bottleneck": "^2.19.5",
     "date-fns": "^4.1.0",
     "fs": "^0.0.1-security",
+    "https-proxy-agent": "^7.0.5",
     "node-fetch": "^3.3.2",
-    "p-limit": "^6.1.0"
-  }
+    "p-limit": "^6.1.0",
+    "proxifly": "^2.0.2",
+    "proxy-master": "^1.5.5",
+    "tor-request": "^3.1.0"
+  },
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": ""
 }

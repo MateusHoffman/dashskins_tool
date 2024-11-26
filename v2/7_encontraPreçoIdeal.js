@@ -81,7 +81,7 @@ export const encontraPreçoIdeal = async () => {
 
       // Remover o campo quantidadeVendas
       // delete modelo.quantidadeVendas;
-      delete modelo.salesHistory;
+      // delete modelo.salesHistory;
 
       // Se sellingPrice não for null, adicionar o modelo ao array modelosComPreçoIdeal
       if (modelo.sellingPrice !== null) {
