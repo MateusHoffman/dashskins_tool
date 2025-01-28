@@ -5,7 +5,7 @@
   "type": "module",
   "license": "MIT",
   "dependencies": {
-    "axios": "^1.7.8",
+    "axios": "^1.7.9",
     "axios-socks5-agent": "^1.0.5",
     "bottleneck": "^2.19.5",
     "date-fns": "^4.1.0",
@@ -15,6 +15,7 @@
     "p-limit": "^6.1.0",
     "proxifly": "^2.0.2",
     "proxy-master": "^1.5.5",
+    "socks-proxy-agent": "^8.0.4",
     "tor-request": "^3.1.0"
   },
   "description": "",

@@ -1,0 +1,25 @@
+{
+  "lucroTotal": 113.59,
+  "rentabilidadeTotal": 3.81,
+  "mediaDiasAteVendaTotal": 5.32,
+  "desempenhoPorMesAno": [
+    {
+      "mesAno": "2025-01",
+      "lucro": 95.38,
+      "mediaDiasAteVenda": 5.88,
+      "mediaRentabilidade": 6.7
+    },
+    {
+      "mesAno": "2024-12",
+      "lucro": 18.19,
+      "mediaDiasAteVenda": 4.48,
+      "mediaRentabilidade": 1.71
+    },
+    {
+      "mesAno": "2024-11",
+      "lucro": 0.02,
+      "mediaDiasAteVenda": 3.75,
+      "mediaRentabilidade": 0.04
+    }
+  ]
+}

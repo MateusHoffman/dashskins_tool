@@ -1,0 +1,27 @@
+[
+  {
+    "proxy": "http://189.240.60.168:9090",
+    "tentativasSemSucesso": 1,
+    "next": false
+  },
+  {
+    "proxy": "http://164.70.68.221:3128",
+    "tentativasSemSucesso": 1,
+    "next": false
+  },
+  {
+    "proxy": "http://131.255.56.22:8080",
+    "tentativasSemSucesso": 4,
+    "next": true
+  },
+  {
+    "proxy": "http://103.227.187.9:6080",
+    "tentativasSemSucesso": 6,
+    "next": false
+  },
+  {
+    "proxy": "http://31.40.248.2:8080",
+    "tentativasSemSucesso": 2,
+    "next": false
+  }
+]
