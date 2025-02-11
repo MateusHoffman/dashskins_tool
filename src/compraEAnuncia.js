@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { projectRoot, TOKEN } from './utils/constants.js';
+import { projectRoot, getToken } from './utils/constants.js';
 import fetch from './utils/fetch.js';
 import ora from 'ora';
 
@@ -47,7 +47,7 @@ const obterSaldo = async () => {
     const requestOptions = {
       method: 'GET',
       url: 'https://dashskins.com.br/api/auth/me',
-      headers: { 'Authorization': TOKEN },
+      headers: { 'Authorization': getToken() },
     };
     const response = await fetch(requestOptions);
     const { balance, bonusBalance } = response.data.user;
@@ -67,7 +67,7 @@ const comprar = async (anuncio) => {
     const requestOptions = {
       method: 'POST',
       url: 'https://dashskins.com.br/api/listing/purchase',
-      headers: { 'Authorization': TOKEN },
+      headers: { 'Authorization': getToken() },
       data: { items: [{ _id: anuncio.id, price: anuncio.precoDeCompra }] },
     };
     const response = await fetch(requestOptions);
@@ -91,7 +91,7 @@ const anunciar = async (anuncio) => {
     const requestOptions = {
       method: 'POST',
       url: 'https://dashskins.com.br/api/user/items/update',
-      headers: { 'Authorization': TOKEN },
+      headers: { 'Authorization': getToken() },
       data: {
         items: [{ _id: anuncio.id, price: anuncio.precoDeVenda, listed: 1 }],
       },

@@ -1,5 +1,272 @@
 [
   {
+    "createdAt": "2025-02-11T17:15:25.298Z",
+    "status": "Compra",
+    "item": {
+      "id": "67ab8428d995b02f97f3d89f",
+      "nome": "M4A1-S | Night Terror (Battle-Scarred)",
+      "price": 8.35
+    }
+  },
+  {
+    "createdAt": "2025-02-11T16:42:39.945Z",
+    "status": "Venda",
+    "item": {
+      "id": "67a17bc9b798f62b57eb6846",
+      "nome": "AK-47 | Nightwish (Field-Tested)",
+      "price": 50.99,
+      "fee": 6,
+      "valorRecebido": 47.93
+    }
+  },
+  {
+    "createdAt": "2025-02-11T16:33:22.645Z",
+    "status": "Compra",
+    "item": {
+      "id": "67ab7a93d995b02f97f2c66e",
+      "nome": "AK-47 | Slate (Well-Worn)",
+      "price": 18
+    }
+  },
+  {
+    "createdAt": "2025-02-11T16:04:37.450Z",
+    "status": "Venda",
+    "item": {
+      "id": "67aa2f97d995b02f97d33c71",
+      "nome": "USP-S | Ticket to Hell (Minimal Wear)",
+      "price": 6.2,
+      "fee": 6,
+      "valorRecebido": 5.83
+    }
+  },
+  {
+    "createdAt": "2025-02-11T16:04:37.450Z",
+    "status": "Venda",
+    "item": {
+      "id": "67aaa41fd995b02f97e2623c",
+      "nome": "USP-S | Ticket to Hell (Minimal Wear)",
+      "price": 6.43,
+      "fee": 6,
+      "valorRecebido": 6.04
+    }
+  },
+  {
+    "createdAt": "2025-02-11T16:04:37.450Z",
+    "status": "Venda",
+    "item": {
+      "id": "67ab608ad995b02f97f032b7",
+      "nome": "USP-S | Ticket to Hell (Minimal Wear)",
+      "price": 6.22,
+      "fee": 6,
+      "valorRecebido": 5.85
+    }
+  },
+  {
+    "createdAt": "2025-02-11T16:04:37.449Z",
+    "status": "Venda",
+    "item": {
+      "id": "67a8025ad995b02f979d53a7",
+      "nome": "USP-S | Ticket to Hell (Minimal Wear)",
+      "price": 6.22,
+      "fee": 6,
+      "valorRecebido": 5.85
+    }
+  },
+  {
+    "createdAt": "2025-02-11T16:04:37.449Z",
+    "status": "Venda",
+    "item": {
+      "id": "67a8d7ecd995b02f97af1742",
+      "nome": "USP-S | Ticket to Hell (Minimal Wear)",
+      "price": 6.22,
+      "fee": 6,
+      "valorRecebido": 5.85
+    }
+  },
+  {
+    "createdAt": "2025-02-11T16:04:37.449Z",
+    "status": "Venda",
+    "item": {
+      "id": "67a935c2d995b02f97bb2545",
+      "nome": "USP-S | Ticket to Hell (Minimal Wear)",
+      "price": 6.2,
+      "fee": 6,
+      "valorRecebido": 5.83
+    }
+  },
+  {
+    "createdAt": "2025-02-11T16:04:37.448Z",
+    "status": "Venda",
+    "item": {
+      "id": "67a7baacd995b02f9794372f",
+      "nome": "USP-S | Ticket to Hell (Minimal Wear)",
+      "price": 6.22,
+      "fee": 6,
+      "valorRecebido": 5.85
+    }
+  },
+  {
+    "createdAt": "2025-02-11T15:30:57.477Z",
+    "status": "Compra",
+    "item": {
+      "id": "67ab6b8bd995b02f97f13f34",
+      "nome": "Charm | Baby's AK",
+      "price": 5.01
+    }
+  },
+  {
+    "createdAt": "2025-02-11T15:11:45.799Z",
+    "status": "Compra",
+    "item": {
+      "id": "67ab67a2d995b02f97f0dede",
+      "nome": "M4A1-S | Black Lotus (Field-Tested)",
+      "price": 54
+    }
+  },
+  {
+    "createdAt": "2025-02-11T14:40:47.661Z",
+    "status": "Compra",
+    "item": {
+      "id": "67ab608ad995b02f97f032b7",
+      "nome": "USP-S | Ticket to Hell (Minimal Wear)",
+      "price": 5.62
+    }
+  },
+  {
+    "createdAt": "2025-02-11T14:31:09.396Z",
+    "status": "Compra",
+    "item": {
+      "id": "67ab5e2dd995b02f97effa7c",
+      "nome": "Desert Eagle | Tilted (Minimal Wear)",
+      "price": 8.5
+    }
+  },
+  {
+    "createdAt": "2025-02-11T14:28:15.352Z",
+    "status": "Compra",
+    "item": {
+      "id": "67a78cf6d995b02f978ed733",
+      "nome": "AK-47 | Slate (Battle-Scarred)",
+      "price": 18
+    }
+  },
+  {
+    "createdAt": "2025-02-11T14:28:08.231Z",
+    "status": "Compra",
+    "item": {
+      "id": "67ab5d9bd995b02f97efec62",
+      "nome": "USP-S | Check Engine (Minimal Wear)",
+      "price": 4.67
+    }
+  },
+  {
+    "createdAt": "2025-02-11T14:16:11.239Z",
+    "status": "Venda",
+    "item": {
+      "id": "67a818add995b02f97a012ec",
+      "nome": "AK-47 | Ice Coaled (Field-Tested)",
+      "price": 31.5,
+      "fee": 6,
+      "valorRecebido": 29.61
+    }
+  },
+  {
+    "createdAt": "2025-02-11T14:16:11.239Z",
+    "status": "Venda",
+    "item": {
+      "id": "67aa5e20d995b02f97d89fcc",
+      "nome": "Desert Eagle | Tilted (Minimal Wear)",
+      "price": 10,
+      "fee": 6,
+      "valorRecebido": 9.4
+    }
+  },
+  {
+    "createdAt": "2025-02-11T14:07:41.447Z",
+    "status": "Compra",
+    "item": {
+      "id": "67ab58c9d995b02f97ef6f8f",
+      "nome": "AWP | Atheris (Field-Tested)",
+      "price": 21
+    }
+  },
+  {
+    "createdAt": "2025-02-11T14:07:34.844Z",
+    "status": "Compra",
+    "item": {
+      "id": "67ab5909d995b02f97ef7615",
+      "nome": "Charm | Baby's AK",
+      "price": 3.57
+    }
+  },
+  {
+    "createdAt": "2025-02-11T14:07:27.751Z",
+    "status": "Compra",
+    "item": {
+      "id": "67ab5909d995b02f97ef7614",
+      "nome": "Charm | Baby's AK",
+      "price": 3.57
+    }
+  },
+  {
+    "createdAt": "2025-02-11T14:06:23.010Z",
+    "status": "Venda",
+    "item": {
+      "id": "67a9f72ad995b02f97cc4426",
+      "nome": "M4A1-S | Night Terror (Minimal Wear)",
+      "price": 5.82,
+      "fee": 6,
+      "valorRecebido": 5.47
+    }
+  },
+  {
+    "createdAt": "2025-02-11T14:04:11.098Z",
+    "status": "Compra",
+    "item": {
+      "id": "67a608a25356432cb6b3dc30",
+      "nome": "AK-47 | Head Shot (Field-Tested)",
+      "price": 52
+    }
+  },
+  {
+    "createdAt": "2025-02-11T13:49:29.961Z",
+    "status": "Venda",
+    "item": {
+      "id": "67aabf4fd995b02f97e5b256",
+      "nome": "M4A1-S | Black Lotus (Field-Tested)",
+      "price": 61.12,
+      "fee": 6,
+      "valorRecebido": 57.45
+    }
+  },
+  {
+    "createdAt": "2025-02-11T11:51:01.647Z",
+    "status": "Compra",
+    "item": {
+      "id": "67ab37e4d995b02f97eca56f",
+      "nome": "USP-S | Cortex (Field-Tested)",
+      "price": 14.07
+    }
+  },
+  {
+    "createdAt": "2025-02-11T11:50:45.600Z",
+    "status": "Compra",
+    "item": {
+      "id": "67ab37e4d995b02f97eca56e",
+      "nome": "AK-47 | Phantom Disruptor (Field-Tested)",
+      "price": 22.77
+    }
+  },
+  {
+    "createdAt": "2025-02-11T11:50:32.880Z",
+    "status": "Compra",
+    "item": {
+      "id": "67ab37e4d995b02f97eca570",
+      "nome": "AWP | Duality (Field-Tested)",
+      "price": 12.91
+    }
+  },
+  {
     "createdAt": "2025-02-11T11:33:16.633Z",
     "status": "Compra",
     "item": {

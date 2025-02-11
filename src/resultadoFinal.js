@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { projectRoot, TAXA, TOKEN } from './utils/constants.js';
+import { getToken, projectRoot, TAXA } from './utils/constants.js';
 import fetch from './utils/fetch.js';
 
 const anunciarComNovoValor = async (anuncio) => {
@@ -9,7 +9,7 @@ const anunciarComNovoValor = async (anuncio) => {
       method: 'POST',
       url: 'https://dashskins.com.br/api/user/items/update',
       headers: {
-        'Authorization': TOKEN,
+        'Authorization': getToken(),
       },
       data: {
         items: [{

@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { projectRoot, TOKEN } from './utils/constants.js';
+import { projectRoot, getToken } from './utils/constants.js';
 import fetch from './utils/fetch.js';
 
 const obterHistorico = async () => {
@@ -31,7 +31,7 @@ const obterHistorico = async () => {
         method: 'GET',
         url: `https://dashskins.com.br/api/history/transactions/62f11eddc880df5083c302cd?page=${pagina}`,
         headers: {
-          'Authorization': TOKEN,
+          'Authorization': getToken(),
         },
       };
 
