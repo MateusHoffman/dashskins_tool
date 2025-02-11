@@ -1,122 +1,197 @@
 [
   {
     "nome": "M4A1-S | Black Lotus (Field-Tested)",
-    "precoDeVenda": 60.36,
-    "comprarAbaixoDe": 55.53
+    "precoDeVenda": 61.12,
+    "comprarAbaixoDe": 56.84
   },
   {
     "nome": "AK-47 | Slate (Field-Tested)",
-    "precoDeVenda": 22.91,
-    "comprarAbaixoDe": 21.08
+    "precoDeVenda": 22.03,
+    "comprarAbaixoDe": 20.49
   },
   {
     "nome": "AWP | Atheris (Field-Tested)",
-    "precoDeVenda": 23.64,
-    "comprarAbaixoDe": 21.75
+    "precoDeVenda": 22.68,
+    "comprarAbaixoDe": 21.09
   },
   {
     "nome": "AK-47 | Ice Coaled (Field-Tested)",
-    "precoDeVenda": 29.31,
-    "comprarAbaixoDe": 26.97
-  },
-  {
-    "nome": "M4A1-S | Nitro (Minimal Wear)",
-    "precoDeVenda": 9.05,
-    "comprarAbaixoDe": 8.33
+    "precoDeVenda": 31.99,
+    "comprarAbaixoDe": 29.75
   },
   {
     "nome": "AK-47 | Slate (Well-Worn)",
-    "precoDeVenda": 20.1,
-    "comprarAbaixoDe": 18.49
+    "precoDeVenda": 20.8,
+    "comprarAbaixoDe": 19.34
   },
   {
-    "nome": "AK-47 | Legion of Anubis (Field-Tested)",
-    "precoDeVenda": 35.78,
-    "comprarAbaixoDe": 32.91
-  },
-  {
-    "nome": "USP-S | Ticket to Hell (Minimal Wear)",
-    "precoDeVenda": 6.15,
-    "comprarAbaixoDe": 5.66
-  },
-  {
-    "nome": "Glock-18 | Candy Apple (Factory New)",
-    "precoDeVenda": 5.73,
-    "comprarAbaixoDe": 5.28
-  },
-  {
-    "nome": "Glove Case",
-    "precoDeVenda": 37.6,
-    "comprarAbaixoDe": 34.59
-  },
-  {
-    "nome": "USP-S | Alpine Camo (Field-Tested)",
-    "precoDeVenda": 10.73,
-    "comprarAbaixoDe": 9.87
-  },
-  {
-    "nome": "USP-S | Black Lotus (Field-Tested)",
-    "precoDeVenda": 9.58,
-    "comprarAbaixoDe": 8.82
-  },
-  {
-    "nome": "USP-S | Cortex (Field-Tested)",
-    "precoDeVenda": 15.14,
-    "comprarAbaixoDe": 13.93
-  },
-  {
-    "nome": "M4A1-S | Night Terror (Battle-Scarred)",
-    "precoDeVenda": 11.16,
-    "comprarAbaixoDe": 10.27
-  },
-  {
-    "nome": "Desert Eagle | Tilted (Field-Tested)",
-    "precoDeVenda": 5.53,
-    "comprarAbaixoDe": 5.09
-  },
-  {
-    "nome": "AK-47 | Nightwish (Field-Tested)",
-    "precoDeVenda": 50.29,
-    "comprarAbaixoDe": 46.27
-  },
-  {
-    "nome": "Gamma 2 Case",
-    "precoDeVenda": 15.45,
-    "comprarAbaixoDe": 14.21
-  },
-  {
-    "nome": "Charm | Pinch O' Salt",
-    "precoDeVenda": 6.89,
-    "comprarAbaixoDe": 6.34
-  },
-  {
-    "nome": "AK-47 | Frontside Misty (Field-Tested)",
-    "precoDeVenda": 80.45,
-    "comprarAbaixoDe": 74.02
-  },
-  {
-    "nome": "AK-47 | Phantom Disruptor (Field-Tested)",
-    "precoDeVenda": 24.91,
-    "comprarAbaixoDe": 22.91
-  },
-  {
-    "nome": "AK-47 | Slate (Minimal Wear)",
-    "precoDeVenda": 35.74,
-    "comprarAbaixoDe": 32.88
-  },
-  {
-    "nome": "AK-47 | Slate (Battle-Scarred)",
-    "precoDeVenda": 20.2,
-    "comprarAbaixoDe": 18.59
-  },
-  {
-    "nome": "Gamma Case",
-    "precoDeVenda": 15.6,
-    "comprarAbaixoDe": 14.35
+    "nome": "M4A1-S | Nitro (Minimal Wear)",
+    "precoDeVenda": 8.4,
+    "comprarAbaixoDe": 7.81
   },
   {
     "nome": "Chroma 3 Case",
-    "precoDeVenda": 15.44,
-    "comprarAbaixoDe": 14.2
+    "precoDeVenda": 14.28,
+    "comprarAbaixoDe": 13.28
+  },
+  {
+    "nome": "Glove Case",
+    "precoDeVenda": 36.85,
+    "comprarAbaixoDe": 34.27
+  },
+  {
+    "nome": "USP-S | Ticket to Hell (Minimal Wear)",
+    "precoDeVenda": 6.43,
+    "comprarAbaixoDe": 5.98
+  },
+  {
+    "nome": "Gamma Case",
+    "precoDeVenda": 15.97,
+    "comprarAbaixoDe": 14.85
+  },
+  {
+    "nome": "M4A1-S | Night Terror (Battle-Scarred)",
+    "precoDeVenda": 10.75,
+    "comprarAbaixoDe": 10
+  },
+  {
+    "nome": "AK-47 | Legion of Anubis (Field-Tested)",
+    "precoDeVenda": 37.22,
+    "comprarAbaixoDe": 34.61
+  },
+  {
+    "nome": "USP-S | Alpine Camo (Field-Tested)",
+    "precoDeVenda": 10.9,
+    "comprarAbaixoDe": 10.14
+  },
+  {
+    "nome": "Gamma 2 Case",
+    "precoDeVenda": 15,
+    "comprarAbaixoDe": 13.95
+  },
+  {
+    "nome": "Spectrum Case",
+    "precoDeVenda": 19.72,
+    "comprarAbaixoDe": 18.34
+  },
+  {
+    "nome": "AK-47 | Nightwish (Field-Tested)",
+    "precoDeVenda": 50.62,
+    "comprarAbaixoDe": 47.08
+  },
+  {
+    "nome": "USP-S | Cortex (Field-Tested)",
+    "precoDeVenda": 15.69,
+    "comprarAbaixoDe": 14.59
+  },
+  {
+    "nome": "AK-47 | Frontside Misty (Field-Tested)",
+    "precoDeVenda": 84.9,
+    "comprarAbaixoDe": 78.96
+  },
+  {
+    "nome": "Charm | Pinch O' Salt",
+    "precoDeVenda": 6.56,
+    "comprarAbaixoDe": 6.1
+  },
+  {
+    "nome": "Glock-18 | Candy Apple (Factory New)",
+    "precoDeVenda": 6.16,
+    "comprarAbaixoDe": 5.73
+  },
+  {
+    "nome": "Charm | Baby's AK",
+    "precoDeVenda": 5.87,
+    "comprarAbaixoDe": 5.46
+  },
+  {
+    "nome": "M4A1-S | Night Terror (Minimal Wear)",
+    "precoDeVenda": 5.97,
+    "comprarAbaixoDe": 5.55
+  },
+  {
+    "nome": "M4A4 | Desolate Space (Field-Tested)",
+    "precoDeVenda": 40.89,
+    "comprarAbaixoDe": 38.03
+  },
+  {
+    "nome": "AK-47 | Slate (Minimal Wear)",
+    "precoDeVenda": 38,
+    "comprarAbaixoDe": 35.34
+  },
+  {
+    "nome": "AK-47 | Phantom Disruptor (Field-Tested)",
+    "precoDeVenda": 25,
+    "comprarAbaixoDe": 23.25
+  },
+  {
+    "nome": "AK-47 | Head Shot (Field-Tested)",
+    "precoDeVenda": 56,
+    "comprarAbaixoDe": 52.08
+  },
+  {
+    "nome": "AK-47 | Slate (Battle-Scarred)",
+    "precoDeVenda": 19.83,
+    "comprarAbaixoDe": 18.44
+  },
+  {
+    "nome": "M4A4 | Neo-Noir (Field-Tested)",
+    "precoDeVenda": 48,
+    "comprarAbaixoDe": 44.64
+  },
+  {
+    "nome": "AK-47 | Elite Build (Field-Tested)",
+    "precoDeVenda": 10.69,
+    "comprarAbaixoDe": 9.94
+  },
+  {
+    "nome": "USP-S | Black Lotus (Field-Tested)",
+    "precoDeVenda": 9.99,
+    "comprarAbaixoDe": 9.29
+  },
+  {
+    "nome": "AWP | Duality (Field-Tested)",
+    "precoDeVenda": 15.4,
+    "comprarAbaixoDe": 14.32
+  },
+  {
+    "nome": "Operation Broken Fang Case",
+    "precoDeVenda": 26.4,
+    "comprarAbaixoDe": 24.55
+  },
+  {
+    "nome": "Desert Eagle | Tilted (Minimal Wear)",
+    "precoDeVenda": 10,
+    "comprarAbaixoDe": 9.3
+  },
+  {
+    "nome": "Lt. Commander Ricksaw | NSWC SEAL",
+    "precoDeVenda": 74.19,
+    "comprarAbaixoDe": 69
+  },
+  {
+    "nome": "AWP | Chromatic Aberration (Field-Tested)",
+    "precoDeVenda": 43.72,
+    "comprarAbaixoDe": 40.66
+  },
+  {
+    "nome": "USP-S | Check Engine (Minimal Wear)",
+    "precoDeVenda": 5.75,
+    "comprarAbaixoDe": 5.35
+  },
+  {
+    "nome": "MAC-10 | Sakkaku (Field-Tested)",
+    "precoDeVenda": 6.19,
+    "comprarAbaixoDe": 5.76
+  },
+  {
+    "nome": "Charm | Lil' SAS",
+    "precoDeVenda": 5.44,
+    "comprarAbaixoDe": 5.06
+  },
+  {
+    "nome": "USP-S | Jawbreaker (Field-Tested)",
+    "precoDeVenda": 49,
+    "comprarAbaixoDe": 45.57
   }
 ]

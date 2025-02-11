@@ -103,8 +103,8 @@ const fetch = async (requestOptions) => {
         }
         currentProxyIndex = alternarProxy(proxies, currentProxyIndex);
       } else {
-        console.log("Todos os proxies falharam. Aguardando 5 minutos...");
-        await new Promise(resolve => setTimeout(resolve, 300000));
+        console.log("Todos os proxies falharam. Aguardando 1 minutos...");
+        await new Promise(resolve => setTimeout(resolve, 1 * 1000));
         continue; // Reiniciar o loop
       }
 

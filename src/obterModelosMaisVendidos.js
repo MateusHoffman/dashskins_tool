@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import fetch from "./utils/fetch.js";
-import { projectRoot } from './utils/constants.js';
+import { projectRoot, TAXA } from './utils/constants.js';
 
 const obterTodosOsAnuncios = async () => {
   console.log('Iniciando coleta de anúncios');
@@ -190,20 +190,18 @@ const obterMelhorPrecoPorModelo = (modelos) => {
 
         // Ajuste de remoção dos 10% extremos
         const tamanho = historicoFiltrado.length;
-        const inicio = Math.ceil(tamanho * 0.1); // Ajustar 10% inicial
-        const fim = Math.floor(tamanho * 0.9); // Ajustar 10% final
+        const inicio = Math.ceil(tamanho * 0.4); // Ajustar 40% inicial
+        const fim = Math.floor(tamanho * 0.6); // Ajustar 40% final
         const historicoAjustado = historicoFiltrado.slice(inicio, fim);
 
         if (historicoAjustado.length > 0) {
-          // Calcular média dos preços ajustados
-          const somaPrecos = historicoAjustado.reduce((soma, venda) => soma + venda.precoDeVenda, 0);
-          const mediaPreco = somaPrecos / historicoAjustado.length;
+          const menorPrecoDeVenda = historicoAjustado[0].precoDeVenda;
 
           // Arredondar para duas casas decimais
           const arredondarDuasCasas = (num) => Math.round(num * 100) / 100;
 
-          modelo.precoDeVenda = arredondarDuasCasas(mediaPreco);
-          modelo.comprarAbaixoDe = arredondarDuasCasas(mediaPreco * (1 - 0.07 - 0.01)); // Desconto de 7% do site + 1% de margem de segurança/lucro
+          modelo.precoDeVenda = arredondarDuasCasas(menorPrecoDeVenda);
+          modelo.comprarAbaixoDe = arredondarDuasCasas(menorPrecoDeVenda * (1 - TAXA - 0.01)); // Desconto de TAXA do site + 1% de margem de segurança/lucro
         } else {
           modelo.precoDeVenda = null;
           modelo.comprarAbaixoDe = null;
@@ -225,7 +223,6 @@ const obterMelhorPrecoPorModelo = (modelos) => {
     return [];
   }
 };
-
 
 const obterModelosMaisVendidos = async () => {
   console.time(`Tempo para obter modelos mais vendidos`);

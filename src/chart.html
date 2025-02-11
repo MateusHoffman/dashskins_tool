@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashskins</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      width: 80%;
+      background: white;
+      padding: 20px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+    }
+    .stat {
+      background: #007bff;
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    canvas {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Dashskins</h1>
+    <div class="stats">
+      <div class="stat" id="lucroTotal">Lucro Total: R$ 0.00</div>
+      <div class="stat" id="totalTransacoes">Total de transações: 0</div>
+      <div class="stat" id="semVenda">Transações sem venda: 0</div>
+      <div class="stat" id="rentabilidadeTotal">Rentabilidade Total: 0%</div>
+    </div>
+    <canvas id="graficoDiario"></canvas>
+    <canvas id="graficoLucroMensal"></canvas>
+  </div>
+
+  <script>
+async function carregarHistoricoEGerarGrafico() {
+  try {
+    const response = await fetch('/src/db/historico.json');
+    const historico = await response.json();
+
+    const transacoes = {};
+    let lucroTotal = 0;
+    const totalGastoPorDia = {};
+
+    historico.forEach(({ createdAt, status, item }) => {
+      const dataUTC = new Date(createdAt);
+      dataUTC.setHours(dataUTC.getHours() - 3);
+      const dataFormatada = `${String(dataUTC.getDate()).padStart(2, '0')}/${String(dataUTC.getMonth() + 1).padStart(2, '0')}/${dataUTC.getFullYear()}`;
+      const mesAno = `${String(dataUTC.getMonth() + 1).padStart(2, '0')}/${dataUTC.getFullYear()}`;
+
+      if (!transacoes[item.id]) {
+        transacoes[item.id] = { compras: [], vendas: [] };
+      }
+
+      const valor = status === 'Venda' ? item.valorRecebido : item.price;
+      transacoes[item.id][status === 'Compra' ? 'compras' : 'vendas'].push({ data: dataFormatada, mesAno, valor });
+
+      if (status === 'Compra') {
+        if (!totalGastoPorDia[dataFormatada]) {
+          totalGastoPorDia[dataFormatada] = 0;
+        }
+        totalGastoPorDia[dataFormatada] += item.price;
+      }
+    });
+
+    document.getElementById('totalTransacoes').innerText = `Total de transações: ${Object.entries(transacoes).length}`;
+    const semVenda = Object.values(transacoes).filter(t => t.compras.length > 0 && t.vendas.length === 0).length;
+    document.getElementById('semVenda').innerText = `Transações sem venda: ${semVenda}`;
+
+    const lucrosPorData = {};
+    const lucrosPorMes = {};
+    let totalInvestido = 0;
+    Object.values(transacoes).forEach(({ compras, vendas }) => {
+      if (compras.length > 0 && vendas.length > 0) {
+        compras.forEach(compra => {
+          vendas.forEach(venda => {
+            const lucro = venda.valor - compra.valor;
+            lucroTotal += lucro;
+
+            if (!lucrosPorData[venda.data]) {
+              lucrosPorData[venda.data] = { individual: 0, acumulado: 0 };
+            }
+            lucrosPorData[venda.data].individual += lucro;
+
+            if (!lucrosPorMes[venda.mesAno]) {
+              lucrosPorMes[venda.mesAno] = { lucro: 0, gasto: 0 };
+            }
+            lucrosPorMes[venda.mesAno].lucro += lucro;
+            lucrosPorMes[venda.mesAno].gasto += compra.valor;
+            totalInvestido += compra.valor;
+          });
+        });
+      }
+    });
+
+    document.getElementById('lucroTotal').innerText = `Lucro Total: R$ ${lucroTotal.toFixed(2)}`;
+
+    const datasOrdenadas = Object.keys(lucrosPorData).sort((a, b) => {
+      const [diaA, mesA, anoA] = a.split('/').map(Number);
+      const [diaB, mesB, anoB] = b.split('/').map(Number);
+      return new Date(anoA, mesA - 1, diaA) - new Date(anoB, mesB - 1, diaB);
+    });
+
+    let lucroAcumulado = 0;
+    const dias = [], lucrosAcumulados = [], lucrosIndividuais = [], gastosDiarios = [];
+
+    datasOrdenadas.forEach(data => {
+      lucroAcumulado += lucrosPorData[data].individual;
+      dias.push(data);
+      lucrosAcumulados.push(lucroAcumulado);
+      lucrosIndividuais.push(lucrosPorData[data].individual);
+      gastosDiarios.push(totalGastoPorDia[data] || 0);
+    });
+
+    const mesesOrdenados = Object.keys(lucrosPorMes).sort((a, b) => {
+      const [mesA, anoA] = a.split('/').map(Number);
+      const [mesB, anoB] = b.split('/').map(Number);
+      return new Date(anoA, mesA - 1) - new Date(anoB, mesB - 1);
+    });
+
+    const lucrosMensais = mesesOrdenados.map(mes => lucrosPorMes[mes].lucro);
+    const gastosMensais = mesesOrdenados.map(mes => lucrosPorMes[mes].gasto);
+    const rentabilidadeMensal = mesesOrdenados.map(mes => (lucrosPorMes[mes].gasto > 0 ? (lucrosPorMes[mes].lucro / lucrosPorMes[mes].gasto) * 100 : 0));
+
+    const rentabilidadeTotal = totalInvestido > 0 ? (lucroTotal / totalInvestido) * 100 : 0;
+    document.getElementById('rentabilidadeTotal').innerText = `Rentabilidade Total: ${rentabilidadeTotal.toFixed(2)}%`;
+
+    new Chart(document.getElementById('graficoDiario').getContext('2d'), {
+      type: 'line',
+      data: {
+        labels: dias,
+        datasets: [
+          {
+            label: 'Lucro Acumulado',
+            data: lucrosAcumulados,
+            borderColor: 'rgba(75, 192, 192, 1)',
+            fill: false,
+            tension: 0.1
+          },
+          {
+            label: 'Lucro Diário',
+            data: lucrosIndividuais,
+            borderColor: 'rgba(192, 75, 75, 1)',
+            fill: false,
+            tension: 0.1
+          },
+          {
+            label: 'Total Gasto no Dia',
+            data: gastosDiarios,
+            borderColor: 'rgba(54, 162, 235, 1)',
+            fill: false,
+            tension: 0.1
+          }
+        ]
+      },
+      options: {
+        plugins: {
+          datalabels: {
+            align: 'top',
+            anchor: 'end',
+            color: 'black',
+            font: {
+              weight: 'bold',
+              size: 10
+            }
+          }
+        },
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+
+    new Chart(document.getElementById('graficoLucroMensal').getContext('2d'), {
+      type: 'bar',
+      data: {
+        labels: mesesOrdenados,
+        datasets: [
+          {
+            label: 'Lucro Mensal',
+            data: lucrosMensais,
+            backgroundColor: 'rgba(54, 162, 235, 0.6)'
+          },
+          {
+            label: 'Rentabilidade Mensal',
+            data: rentabilidadeMensal,
+            backgroundColor: 'rgba(255, 159, 64, 0.6)'
+          }
+        ]
+      },
+      options: {
+        plugins: {
+          datalabels: {
+            color: 'white',
+            font: {
+              weight: 'bold',
+              size: 12
+            },
+            formatter: (value) => value.toFixed(2)
+          }
+        },
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+  } catch (error) {
+    console.error('Erro ao carregar o arquivo JSON:', error);
+  }
+}
+
+carregarHistoricoEGerarGrafico()
+</script>
+</body>
+</html>

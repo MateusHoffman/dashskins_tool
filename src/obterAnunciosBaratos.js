@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { projectRoot } from './utils/constants.js';
+import { projectRoot, TAXA } from './utils/constants.js';
 import { createQueryString } from './utils/createQueryString.js';
 import fetch from './utils/fetch.js';
 
@@ -44,7 +44,7 @@ const obterAnunciosBaratos = async () => {
       const data = response.data
       if (Array.isArray(data.results) && data.results.length > 0) {
         anuncios.push(...data.results.map(anuncio => {
-          const lucro = modelo.precoDeVenda - (modelo.precoDeVenda * 0.07 ) - anuncio.price
+          const lucro = modelo.precoDeVenda - (modelo.precoDeVenda * TAXA ) - anuncio.price
           return {
           id: anuncio._id,
           nome: anuncio.market_hash_name,
@@ -69,8 +69,8 @@ const obterAnunciosBaratos = async () => {
 const loopInfinito = async () => {
   while (true) {
     await obterAnunciosBaratos(); // Executa a função principal
-    console.log('Execução concluída. Aguardando 30 minutos antes da próxima execução...');
-    await new Promise(resolve => setTimeout(resolve, 30 * 60 * 1000)); // Aguarda 30 minutos
+    console.log('Execução concluída. Aguardando 1 minutos antes da próxima execução...');
+    await new Promise(resolve => setTimeout(resolve, 1 * 60 * 1000));
   }
 };
 

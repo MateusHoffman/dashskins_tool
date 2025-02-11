@@ -153,11 +153,12 @@ const resultadoFinal = async () => {
     console.log('Novo resultado salvo com sucesso:', novoResultado);
 
     // Lista de Anúncios Não Vendidos com diasDeAnuncio >= 14
-    const anunciosNaoVendidos = resultado.filter(({ venda, diasDeAnuncio, dataDaVenda }) => {
+    const anunciosNaoVendidos = resultado.filter(({ diasDeAnuncio, dataDaVenda }) => {
       return !dataDaVenda && diasDeAnuncio >= 14;
     });
 
     console.log(`Existe ${anunciosNaoVendidos.length} anúncios não vendidos com mais de 14 dias anunciado`);
+    // console.log('anunciosNaoVendidos', anunciosNaoVendidos)
     for (const anuncio of anunciosNaoVendidos) {
       await anunciarComNovoValor(anuncio);
     }
